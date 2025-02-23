@@ -1,6 +1,6 @@
 ---
 id: hell-world
-title: New Title Changed - part 2 + 1
+title: Using Refetch
 slug: hell-world
 category: clodign
 author: asd
