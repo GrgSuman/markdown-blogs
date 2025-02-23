@@ -1,6 +1,6 @@
 import React from "react";
 import BlogCard from "./Card";
-import { getPostsByCategory, getSortedPostsData } from "@/actions/posts";
+import { getPostsByCategory, getSortedPostsData } from "@/lib/posts";
 
 const BlogList = async ({
   category = "",
