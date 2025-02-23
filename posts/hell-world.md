@@ -1,6 +1,6 @@
 ---
 id: hell-world
-title: New Title Changed
+title: Using Refetch and Reverting back - Working
 slug: hell-world
 category: clodign
 author: asd
