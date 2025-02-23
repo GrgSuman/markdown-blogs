@@ -1,4 +1,4 @@
-import { getAllCategories, getPostsByCategory } from '@/actions/posts';
+import { getAllCategories, getPostsByCategory } from '@/lib/posts';
 import BlogList from '@/components/blog-components/BlogList';
 import { slugify } from '@/lib/slugify';
 import React from 'react'
