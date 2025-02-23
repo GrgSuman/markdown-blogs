@@ -1,6 +1,6 @@
 ---
 id: new-demo
-title: Demo blog Contents Changed
+title: Demo blog Contents Changed from WEB
 slug: new-demo
 category: Python
 author: SUman
