@@ -1,6 +1,6 @@
 ---
 id: automate-the-boring-stuff-with-python
-title: Automate the Boring Stuff with Python - Updated part 2
+title: Automate the Boring Stuff with Python - Updated part 3
 slug: automate-the-boring-stuff-with-python
 category: Suman
 author: Suman
