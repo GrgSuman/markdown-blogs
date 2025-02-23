@@ -1,7 +1,7 @@
 ---
-id: nestjs-vs-expressjs
-title: NestJS vs. Express.js
-slug: nestjs-vs-expressjs
+id: new-demo
+title: Demo blog
+slug: new-demo
 category: Python
 author: SUman
 isPublished: false
