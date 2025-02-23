@@ -73,7 +73,7 @@ const BlogListingTable: React.FC<{ posts: any[] }> = ({ posts }) => {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {posts.map((post, index) => (
-                <tr key={post.id} className="text-sm">
+                <tr key={post.id + post.slug} className="text-sm">
                   <td className="px-6 py-4">{post.title}</td>
                   <td className="px-6 py-4">{post.category}</td>
                   <td className="px-6 py-4">

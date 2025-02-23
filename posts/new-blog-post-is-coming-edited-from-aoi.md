@@ -1,7 +1,7 @@
 ---
-id: new-blog-post-is-coming
-title: New Blog Post is coming - Edited
-slug: new-blog-post-is-coming-edited
+id: new-blog-post-is-coming-edited
+title: New Blog Post is coming - Edited From AOI
+slug: new-blog-post-is-coming-edited-from-aoi
 category: Test3
 author: Suman Grg
 isPublished: true

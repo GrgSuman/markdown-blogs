@@ -37,7 +37,7 @@ const BlogList = async ({
         <div className="grid gap-4 md:grid-cols-2 md:gap-6 mt-8">
           {postsData.map((data) => (
             <BlogCard
-              key={data.id}
+              key={data.id + data.slug}
               title={data.title}
               date={data?.createdAt}
               thumbnailLink={data?.thumbnailURL}

@@ -154,9 +154,6 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
 
     const result = await res.json();
 
-    // const result = await savePost(fileName, frontMatter);
-
-
     if (result.success) {
       window.location.href = "/admin";
     } else {
@@ -179,14 +176,16 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
 
     const fileName = `${blogPost.slug}.md`;
 
-    // const deleteResult = await deletePost(data.slug);
 
-    if (!deleteResult.success) {
-      alert(deleteResult.msg);
-      return; // Stop execution if delete fails
-    }
+    const res = await fetch("/api/posts", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fileName, frontMatter, slug:data.slug }),
+    })
 
-    // const result = await savePost(fileName, frontMatter);
+    const result = await res.json();
 
     if (result.success) {
       window.location.href = "/admin";
@@ -459,6 +458,7 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
         <Button 
           type="submit" 
           variant="outline"
+          disabled
           className="w-full bg-white hover:bg-gray-50 text-gray-700 border-gray-200"
         >
           Save as a Draft
