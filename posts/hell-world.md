@@ -1,6 +1,6 @@
 ---
 id: hell-world
-title: New Title Changed - part 2
+title: New Title Changed - part 2 + 1
 slug: hell-world
 category: clodign
 author: asd
