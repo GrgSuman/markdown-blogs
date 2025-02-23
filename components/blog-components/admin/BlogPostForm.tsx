@@ -107,17 +107,16 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
     const newErrors = {};
     let isValid = true;
 
-    Object.keys(blogPost).forEach((field) => {
-      const errorMessage = validateField(field, blogPost[field]);
-      if (errorMessage) {
-        newErrors[field] = errorMessage;
-        isValid = false;
-      }
-    });
+    // Object.keys(blogPost).forEach((field) => {
+    //   const errorMessage = validateField(field, blogPost[field]);
+    //   if (errorMessage) {
+    //     newErrors[field] = errorMessage;
+    //     isValid = false;
+    //   }
+    // });
 
     setErrors(newErrors);
     return isValid;
-    return true
   };
 
   const handleCreate = async (e: React.FormEvent) => {
@@ -145,7 +144,18 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
 
     const fileName = `${blogPost.slug}.md`;
 
-    const result = await savePost(fileName, frontMatter);
+    const res = await fetch("/api/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ fileName, frontMatter }),
+    })
+
+    const result = await res.json();
+
+    // const result = await savePost(fileName, frontMatter);
+
 
     if (result.success) {
       window.location.href = "/admin";
@@ -169,14 +179,14 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
 
     const fileName = `${blogPost.slug}.md`;
 
-    const deleteResult = await deletePost(data.slug);
+    // const deleteResult = await deletePost(data.slug);
 
     if (!deleteResult.success) {
       alert(deleteResult.msg);
       return; // Stop execution if delete fails
     }
 
-    const result = await savePost(fileName, frontMatter);
+    // const result = await savePost(fileName, frontMatter);
 
     if (result.success) {
       window.location.href = "/admin";
@@ -469,3 +479,5 @@ export function BlogPostForm({ categoriesList, data }:{categoriesList: string[],
 }
 
 export default BlogPostForm;
+
+

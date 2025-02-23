@@ -4,11 +4,11 @@ import { redirect } from 'next/navigation';
 import React from 'react'
 
 // Tell Next.js this is a dynamic route
-export const dynamic = 'force-dynamic'
 
 
 export const generateStaticParams = () => {
-  return []
+  return [
+    { editSlug: "new" },]
 }
 
 const page = async ({params}:{params:Promise<{editSlug:string}>}) => {
